@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sunisoft</title>
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
@@ -44,10 +45,10 @@
                     <nav class="navbar navbar-expand-sm">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Sign In</a>
+                                <a class="nav-link" href="{{route('sign_in')}}">Sign In</a>
                             </li>
                             <li class="nav-item active mt-1 ml-1">
-                                <button type="button" class="btn btn-primary btn-sm">Sign Up</button>
+                                <a class="btn btn-primary btn-sm" href="{{route('sign_up')}}">Sign Up</a>
                             </li>
                         </ul>
                     </nav>

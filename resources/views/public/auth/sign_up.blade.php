@@ -9,6 +9,7 @@
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app_public.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
@@ -16,6 +17,9 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
+    </video>
     <div class="container-fluid">
         <div class="row" style="z-index: 40;">
             <div class="col-3 offset-4  ">
