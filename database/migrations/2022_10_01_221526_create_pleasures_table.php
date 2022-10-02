@@ -14,7 +14,7 @@ class CreatePleasuresTable extends Migration
     public function up()
     {
         Schema::create('pleasures', function (Blueprint $table) {
-            $table->smallInteger('id_pleasure');
+            $table->smallIncrements('id_pleasure');
             $table->integer('user_id')->unsigned();
             $table->integer('categ_id')->unsigned();
             $table->timestamps();

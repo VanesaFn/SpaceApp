@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class ProfilePublicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,10 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $user = Auth::user();
+        //$resources = 
+        return view('dashboard_public.profile.index');
     }
 
     /**
@@ -36,15 +37,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create([
-            'id_user' => $request->id_user, 
-            'rol_id' => $request->rol_id, 
-            'name' => $request->name, 
-            'last_name' => $request->last_name, 
-            'email' => $request->email, 
-            'pais' => $request->pais,
-            'password' => Hash::make($request->password),
-        ]);
+        //
     }
 
     /**
