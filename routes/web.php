@@ -14,7 +14,43 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/home', function () {
+    return view('public.home.index');
+});
+
+Route::get('/sign_in', function () {
+    return view('public.auth.sign_in');
+});
+
+Route::get('/sign_up', function () {
+    return view('public.auth.sign_up');
+});
+
+Route::get('/profile', function () {
     return view('dashboard_public.profile.index');
+});
+
+Route::get('/detail', function () {
+    return view('public.resources.detail');
+});
+
+Route::get('/team', function () {
+    return view('public.team.index');
+});
+
+Route::get('/up_res', function () {
+    return view('dashboard_public.resources.create');
+});
+
+Route::get('/res', function () {
+    return view('public.resources.index');
+});
+
+Route::get('/res', function () {
+    return view('public.resources.index');
 });
 
 Route::get('/dashboard', function () {
