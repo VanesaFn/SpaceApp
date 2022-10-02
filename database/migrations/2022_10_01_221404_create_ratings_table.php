@@ -14,8 +14,23 @@ class CreateRatingsTable extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id_ratings');
+            $table->smallInteger('calificacion');
+            $table->integer('user_id')->unsigned();
+            $table->integer('resource_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id_user')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('resource_id')
+                ->references('id_resource')
+                ->on('resource')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

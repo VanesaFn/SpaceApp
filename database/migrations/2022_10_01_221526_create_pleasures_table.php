@@ -14,8 +14,22 @@ class CreatePleasuresTable extends Migration
     public function up()
     {
         Schema::create('pleasures', function (Blueprint $table) {
-            $table->id();
+            $table->smallInteger('id_pleasure');
+            $table->integer('user_id')->unsigned();
+            $table->integer('categ_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id_user')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('categ_id')
+                ->references('id_category')
+                ->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
