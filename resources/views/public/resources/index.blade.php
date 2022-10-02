@@ -13,7 +13,7 @@
 	<script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
 	<script src="{{ asset('atlantis/assets/js/core/bootstrap.min.js') }}"></script>
 </head>
-<body>
+<body> 
 <div class="row">
 <div class="col-3 offset-4  ">
                 <nav class="navbar navbar-expand-sm">
@@ -47,15 +47,15 @@
             
         </div>
         </div>
-    <div class="container-fluid">
+     <div class="container-fluid">
         <div class="row">
             <div class="col-7 offset-1 mt-3">
-            <h1>Recursos y repositorios</h1>
+            <h1>Resources and repository</h1>
             </div>
-            <div class="col-4 text-center mt-4">
+            <div class="col-4 text-center mt-4">  
             <form class="form-inline" action="/action_page.php">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
+                <button class="btn btn-primary" type="submit">Search</button>
             </form>
             </div>
         </div>
@@ -111,7 +111,7 @@
             </div>
             <div class="col-5 mr-5">
                 <div class="row mt-5 ml-5">
-                    <h2>Filtros</h2>
+                    <h2>Filters</h2>
                 </div>
                 <div class="row  mt-3 ml-5">
                   <label class="switch">
