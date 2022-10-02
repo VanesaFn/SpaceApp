@@ -38,6 +38,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#"><u>Log in</u></a>
                         </li>
+                        <li class="nav-item active mt-1">
+                          <button type="button" class="button-34" >Sign Up</button>
+                      </li>
                     </ul>
                 </nav>
             </div>
@@ -48,8 +51,27 @@
       <h3>Team</h3>
     </div>
   </div>
-  <div class="row">
-    <img src="{{ asset('img/user_-removebg-preview.png') }}" alt="" width="450">
+  <p></p>
+  <form>
+    <div class="row mt-5">
+      <div class="col-2 offset-3">
+        <img src="{{ asset('img/vane.png') }}" alt="" width="150" class="rounded-circle">
+      </div>
+      <div class="col-2">
+        <img src="{{ asset('img/Cris.png') }}" alt="" width="150" class="rounded-circle">
+      </div>
+      <div class="col-2">
+        <img src="{{ asset('img/Dowe.png') }}" alt="" width="150" class="rounded-circle">
+      </div>
+    </div>
+  </form>
+  <div class="row mt-4">
+    <div class="col-2 offset-4">
+      <img src="{{ asset('img/hanna.png') }}" alt="" height="150" width="150" class="rounded-circle">
+    </div>
+    <div class="col-2">
+      <img src="{{ asset('img/Felipe.png') }}" alt="" height="150" width="150" class="rounded-circle">
+    </div>
   </div>
 </body>
 </html>

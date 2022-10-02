@@ -33,14 +33,13 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        
-
         $user = User::create([
             'id_user' => $request->id_user, 
-            'rol_id' => $request->rol_id, 
+            'rol_id' => "2", 
             'name' => $request->name, 
             'last_name' => $request->last_name, 
             'email' => $request->email, 
+            'phone' => $request->phone,
             'pais' => $request->pais,
             'password' => Hash::make($request->password),
         ]);

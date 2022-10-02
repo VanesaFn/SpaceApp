@@ -22,18 +22,18 @@
         <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
     </video>
     <div class="container-fluid">
-        <div class="row" style="z-index: 40;">
-            <div class="col-3 offset-4  ">
+        <div class="row">
+            <div class="col-3 offset-4">
                 <nav class="navbar navbar-expand-sm">
                     <ul class="navbar-nav ml-4">
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="{{route('about_us')}}">About us</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Resources</a>
+                            <a class="nav-link" href="{{route('resources_public')}}">Resources</a>
                         </li>
                     </ul>
                 </nav>
@@ -42,14 +42,13 @@
                 <div class="span">
                     <nav class="navbar navbar-expand-sm float-right">
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><u>Log in</u></a>
+                            <li class="nav-item active mt-1">
+                                <a class="button-34" href="{{route('sign_in')}}" style="text-decoration: none;">Sign In</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-
         </div>
         <p></p>
         <div class="row ">
@@ -63,19 +62,20 @@
             </div>
         </div>
         <p></p>
-        <form>
+        <form method="POST" action="{{ route('register') }}">
+        @csrf
             <div class="row">
                 <div class="col-4 offset-1">
                     <label>Name</label>
-                    <input type="text" class="form-control" placeholder="Name" id="name_signUp">
+                    <input type="text" class="form-control" placeholder="Name" id="name" name="name">
                 </div>
                 <div class="col-4">
                     <label>Lastname</label>
-                    <input type="text" class="form-control" placeholder="Lastname" id="lastname_signUp">
+                    <input type="text" class="form-control" placeholder="Lastname" id="last_name" name="last_name">
                 </div>
                 <div class="col-2">
                     <label>Country</label>
-                    <select class="form-control" id="selCountry_signUp">
+                    <select class="form-control" id="selCountry_signUp" name="pais">
                         <option>Colombia</option>
                         <option>Brasil</option>
                         <option>Portugal</option>
@@ -84,26 +84,20 @@
                     </select>
                 </div>
             </div>
-        </form>
-        <p></p>
-        <form>
-            <div class="row" style="z-index:40 !important;">
+            <div class="row mt-2">
                 <div class="col-4 offset-1">
                     <label>Cellphone number</label>
-                    <input type="text" class="form-control" placeholder="Number" id="number_signUp">
+                    <input type="text" class="form-control" placeholder="Number" id="phone" name="phone">
                 </div>
                 <div class="col-4">
                     <label>Email</label>
-                    <input type="text" class="form-control" placeholder="Email" id="email_signUp">
+                    <input type="text" class="form-control" placeholder="Email" name="email">
                 </div>
             </div>
-        </form>
-        <p></p>
-        <form>
-            <div class="row" style="z-index:40;">
+            <div class="row">
                 <div class="col-4 offset-1">
                     <label>Password</label>
-                    <input type="text" class="form-control" placeholder="********" id="pass_signUp">
+                    <input type="text" class="form-control" placeholder="********" name="password">
                 </div>
                 <div class="col-2">
                     <label>Preferences</label>
@@ -116,16 +110,14 @@
                     </select>
                 </div>
             </div>
-        </form>
-        <p></p>
-        <div class="row mt-4">
-            <div class="col-11 text-center">
-                <button type="button" class="button-34" id="btn_SignUp"
-                type="submit">Create account</button>
+            <div class="row mt-4">
+                <div class="col-11 text-center">
+                    <button class="button-34" id="btn_SignUp" type="submit">Create account</button>
+                </div>
             </div>
-        </div>
-        <div class="row" style="margin-top: -240px;">
-            <div class="col-12 d-flex justify-content-end" >
+        </form>
+        <div class="row" style="margin-top: -220px;">
+            <div class="offset-10 col-2 d-flex justify-content-end" >
                 <img src="{{ asset('img/user_-removebg.png') }}" alt="" width="450">
             </div>
         </div>
