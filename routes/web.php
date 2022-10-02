@@ -49,10 +49,6 @@ Route::get('/res', function () {
     return view('public.resources.index');
 });
 
-Route::get('/res', function () {
-    return view('public.resources.index');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
