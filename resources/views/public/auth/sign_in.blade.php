@@ -50,7 +50,7 @@
         
         <div class="row">
             <div class="col-6">
-                <img src="{{ asset('img/user_-removebg-preview.png') }}" alt="">
+                <img src="{{ asset('img/user_-removebg.png') }}" alt="">
             </div>
             <div class="col-6">
                 <div class="row" style="margin-top: 145px;">

@@ -121,7 +121,7 @@
         </div>
         <div class="row" style="margin-top: -240px;">
             <div class="col-12 d-flex justify-content-end" >
-                <img src="{{ asset('img/user_-removebg-preview.png') }}" alt="" width="450">
+                <img src="{{ asset('img/user_-removebg.png') }}" alt="" width="450">
             </div>
         </div>
     </div>
