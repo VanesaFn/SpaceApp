@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfilePublicController;
+use App\Http\Controllers\ResourcesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,9 +31,7 @@ Route::get('/sign_up', function () {
     return view('public.auth.sign_up');
 });
 
-Route::get('/profile', function () {
-    return view('dashboard_public.profile.index');
-});
+Route::get('/profile', [ProfilePublicController::class, 'index']);
 
 Route::get('/detail', function () {
     return view('public.resources.detail');
@@ -45,13 +45,7 @@ Route::get('/up_res', function () {
     return view('dashboard_public.resources.create');
 });
 
-Route::get('/res', function () {
-    return view('public.resources.index');
-});
-
-Route::get('/res', function () {
-    return view('public.resources.index');
-});
+Route::get('/resources', [ResourcesController::class,'create']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
