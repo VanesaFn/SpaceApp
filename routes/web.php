@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\HomePublicController;
 use App\Http\Controllers\ProfilePublicController;
 use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\ResourcesPublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,13 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('public.home.index');
-});
+Route::get('/', [HomePublicController::class, 'index'])->name('home');
 
 Route::get('/sign_in', function () {
     return view('public.auth.sign_in');
@@ -45,7 +42,10 @@ Route::get('/up_res', function () {
     return view('dashboard_public.resources.create');
 });
 
-Route::get('/resources', [ResourcesController::class,'create']);
+Route::get('/about_us', [AboutUsController::class, 'index']);
+
+Route::get('/resources', [ResourcesController::class,'create'])->name('resources');
+Route::get('/resources_public', [ResourcesPublicController::class,'index'])->name('resources_public');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
