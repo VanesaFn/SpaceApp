@@ -2,10 +2,24 @@
 
 namespace App\Models;
 
+use CreateCategoriesTable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Pleasure extends Model
 {
     use HasFactory;
+    protected $table = "pleasures";
+    protected $primaryKey = "id_pleasure";
+    protected $guarded = [];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class,'user_id','id_user');
+    }
+
+    public function categories()
+    {
+        return $this->belongsTo(Category::class,'categ_id','id_category');
+    }
 }
