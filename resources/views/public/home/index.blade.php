@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Sunisoft</title>
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
+    </video>
     <div class="container-fluid">
         <!-- Navbar-->
         <div class="row">
@@ -25,13 +28,13 @@
                 <nav class="navbar navbar-expand-sm">
                     <ul class="navbar-nav offset-1 ">
                         <li class="nav-item ml-4">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Sobre Nosotros</a>
+                            <a class="nav-link" href="{{ route('home') }}">About Us</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Recursos</a>
+                            <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
                         </li>
                     </ul>
                 </nav>
@@ -41,10 +44,10 @@
                     <nav class="navbar navbar-expand-sm">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Iniciar Sesión</a>
+                                <a class="nav-link" href="#">Sign In</a>
                             </li>
                             <li class="nav-item active mt-1 ml-1">
-                                <button type="button" class="btn btn-primary btn-sm">Registrarse</button>
+                                <button type="button" class="btn btn-primary btn-sm">Sign Up</button>
                             </li>
                         </ul>
                     </nav>
@@ -66,7 +69,7 @@
                 </p>
             </div>
             <div class="col-5 ml-5">
-                <img class="ml-5" src="{{ asset('img/planet_.png') }}" width="530" height="415" alt="">
+                <img class="ml-5" src="{{ asset('img/planet.png') }}" width="530" height="415" alt="">
             </div>
         </div>
         <!-- 3 row -->
