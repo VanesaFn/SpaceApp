@@ -22,11 +22,11 @@ Route::get('/', [HomePublicController::class, 'index'])->name('home');
 
 Route::get('/sign_in', function () {
     return view('public.auth.sign_in');
-});
+})->name('sign_in');
 
 Route::get('/sign_up', function () {
     return view('public.auth.sign_up');
-});
+})->name('sign_up');
 
 Route::get('/profile', [ProfilePublicController::class, 'index']);
 

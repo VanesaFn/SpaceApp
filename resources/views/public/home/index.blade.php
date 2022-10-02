@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sunisoft</title>
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stilosR.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
@@ -44,10 +46,10 @@
                     <nav class="navbar navbar-expand-sm">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Sign In</a>
+                                <a class="nav-link" href="{{route('sign_in')}}">Sign In</a>
                             </li>
                             <li class="nav-item active mt-1 ml-1">
-                                <button type="button" class="btn btn-primary btn-sm">Sign Up</button>
+                                <a class="btn btn-primary btn-sm" href="{{route('sign_up')}}">Sign Up</a>
                             </li>
                         </ul>
                     </nav>
@@ -101,14 +103,14 @@
         <br>
         <!-- 5 row -->
         <div class="row mt-5">
-            <div class=" offset-1 col">
-                <img class="" src="{{ asset('img/valorproyecto.png') }}" width="500" height="500"
+            <div class=" offset-1 col-2">
+                <img class="" src="{{ asset('img/valorproyecto1.png') }}" width="500" height="500"
                     alt="">
             </div>
-            <div class="col-6">
+            <div class="col-6" style="margin-left: 300px;">
 
-                <h2 class="ml-5 p-3">Valor del proyecto</h2>
-                <p class="ml-5 text-justify" id="parrafo">El valor del proyecto radica principalmente en generar una
+                <h2 class="p-3">Valor del proyecto</h2>
+                <p class="text-justify" id="parrafo">El valor del proyecto radica principalmente en generar una
                     herramienta util tanto para los educadores como para los estudiantes y programadores autodidactas
                     brindando asi una oportunidad de capacitacion facil y objetiva, evitando asi esfuerzos adicionales o
                     gasto de tiempo en busqueda de dichos recursos </p>
