@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-3 offset-4  ">
             <nav class="navbar navbar-expand-sm">
-                <ul class="navbar-nav ">
+                <ul class="navbar-nav ml-4 ">
                     <li class="nav-item ">
                         <a class="nav-link" href="#">Home</a>
                     </li>
@@ -52,10 +52,10 @@
     </div>
     <div class="row mb-4">
         <div class="col-7 text-center offset-2">
-            <h1>Nombre articulo</h1>
+            <h1>article name</h1>
         </div>
         <div class="col-3 text-center mt-2">
-            <button type="button" class="btn btn-primary btn-sm">volver</button>
+            <button type="button" class="btn btn-primary btn-sm">Back</button>
         </div>
     </div>
     <div class="row">
@@ -73,7 +73,7 @@
                 <div class="card">
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                            Formacion y educación de la agencia espacial europea
+                            Training and education of the European space agency
                         </a>
                     </div>
                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
@@ -86,7 +86,7 @@
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                           Formacion de la organización Europea para la explotación de satelites Meteorologicos (EUMETSAT)
+                            Formation of the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT)
                         </a>
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -98,7 +98,7 @@
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            Espacio para mas links
+                           Espacio para mas links
                         </a>
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">

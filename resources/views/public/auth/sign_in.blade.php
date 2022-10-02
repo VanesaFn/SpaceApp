@@ -9,6 +9,7 @@
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app_public.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stilosR.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <title>Sunisoft</title>
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
@@ -17,19 +18,22 @@
     <script src="{{ asset('atlantis/assets/js/core/bootstrap.min.js') }}"></script>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
+    </video>
     <div class="container-fluid">
         <div class="row">
             <div class="col-3 offset-4">
                 <nav class="navbar navbar-expand-sm">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Home</a>
+                    <ul class="navbar-nav ml-4">
+                        <li class="nav-item  ">
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="{{ route('') }}">About us</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Resources</a>
+                            <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +51,7 @@
             </div>
         </div>
         <p></p>
-        
+
         <div class="row">
             <div class="col-6">
                 <img src="{{ asset('img/user_-removebg.png') }}" alt="">

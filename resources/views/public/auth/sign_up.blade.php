@@ -10,6 +10,7 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app_public.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stilosR.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
@@ -24,7 +25,7 @@
         <div class="row" style="z-index: 40;">
             <div class="col-3 offset-4  ">
                 <nav class="navbar navbar-expand-sm">
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav ml-4">
                         <li class="nav-item ">
                             <a class="nav-link" href="#">Home</a>
                         </li>

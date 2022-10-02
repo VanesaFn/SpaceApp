@@ -77,7 +77,7 @@
                 <div class="row">
                     <div class="col-12 mt-2">
                         <a href="" class="text-light">
-                            <h5>Configuración</h5>
+                            <h5>Settings</h5>
                         </a>
                     </div>
                 </div>
