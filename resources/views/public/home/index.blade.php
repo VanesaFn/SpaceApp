@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
+    </video>
     <div class="container-fluid">
         <!-- Navbar-->
         <div class="row">
