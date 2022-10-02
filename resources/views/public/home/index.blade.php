@@ -9,6 +9,7 @@
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stilosR.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
@@ -101,14 +102,14 @@
         <br>
         <!-- 5 row -->
         <div class="row mt-5">
-            <div class=" offset-1 col">
-                <img class="" src="{{ asset('img/valorproyecto.png') }}" width="500" height="500"
+            <div class=" offset-1 col-2">
+                <img class="" src="{{ asset('img/valorproyecto1.png') }}" width="500" height="500"
                     alt="">
             </div>
-            <div class="col-6">
+            <div class="col-6" style="margin-left: 300px;">
 
-                <h2 class="ml-5 p-3">Valor del proyecto</h2>
-                <p class="ml-5 text-justify" id="parrafo">El valor del proyecto radica principalmente en generar una
+                <h2 class="p-3">Valor del proyecto</h2>
+                <p class="text-justify" id="parrafo">El valor del proyecto radica principalmente en generar una
                     herramienta util tanto para los educadores como para los estudiantes y programadores autodidactas
                     brindando asi una oportunidad de capacitacion facil y objetiva, evitando asi esfuerzos adicionales o
                     gasto de tiempo en busqueda de dichos recursos </p>
