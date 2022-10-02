@@ -66,7 +66,7 @@
                 </p>
             </div>
             <div class="col-5 ml-5">
-                <img class="ml-5" src="{{ asset('img/planet_.png') }}" width="530" height="415" alt="">
+                <img class="ml-5" src="{{ asset('img/planet.png') }}" width="530" height="415" alt="">
             </div>
         </div>
         <!-- 3 row -->
