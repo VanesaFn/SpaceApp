@@ -21,30 +21,32 @@
         <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
       </video>
     <div class="row">
-        <div class="col-3 offset-4  ">
+        <div class="col-4">
+        </div>
+        <div class="col">
             <nav class="navbar navbar-expand-sm">
-                <ul class="navbar-nav ">
-                    <li class="nav-item ">
+                <ul class="navbar-nav offset-1 ">
+                    <li class="nav-item ml-4">
                         <a class="nav-link" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="{{ route('about_us') }}">About Us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Resources</a>
+                        <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="col-2 offset-2">
-            <div class="span">
-                <nav class="navbar navbar-expand-sm float-right">
+        <div class="span">
+            <div class="col">
+                <nav class="navbar navbar-expand-sm">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Log in</a>
+                            <a class="nav-link" href="{{route('sign_in')}}">Sign In</a>
                         </li>
                         <li class="nav-item active mt-1 ml-1">
-                            <button type="button" class="btn btn-primary btn-sm">Sign Up</button>
+                            <a class="btn btn-primary btn-sm" href="{{route('sign_up')}}">Sign Up</a>
                         </li>
                     </ul>
                 </nav>

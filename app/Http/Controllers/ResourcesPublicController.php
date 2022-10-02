@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resource;
 use Illuminate\Http\Request;
 
 class ResourcesPublicController extends Controller
@@ -13,7 +14,8 @@ class ResourcesPublicController extends Controller
      */
     public function index()
     {
-        return view('public.resources.index');
+        $resources = Resource::get();
+        return view('public.resources.index', compact('resources'));
     }
 
 }

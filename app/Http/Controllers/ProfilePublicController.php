@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,8 +16,8 @@ class ProfilePublicController extends Controller
     public function index()
     {   
         $user = Auth::user();
-        //$resources = 
-        return view('dashboard_public.profile.index');
+        $resources = Resource::where('user_id', $user->id_user)->get(); 
+        return view('dashboard_public.profile.index', compact('resources', 'user'));
     }
 
     /**

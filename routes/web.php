@@ -28,7 +28,7 @@ Route::get('/sign_up', function () {
     return view('public.auth.sign_up');
 })->name('sign_up');
 
-Route::get('/profile', [ProfilePublicController::class, 'index']);
+Route::get('/profile', [ProfilePublicController::class, 'index'])->middleware(['auth']);
 
 Route::get('/detail', function () {
     return view('public.resources.detail');
@@ -42,7 +42,7 @@ Route::get('/up_res', function () {
     return view('dashboard_public.resources.create');
 });
 
-Route::get('/about_us', [AboutUsController::class, 'index']);
+Route::get('/about_us', [AboutUsController::class, 'index'])->name('about_us');
 
 Route::get('/resources', [ResourcesController::class,'create'])->name('resources');
 Route::get('/resources_public', [ResourcesPublicController::class,'index'])->name('resources_public');
