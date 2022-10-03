@@ -11,6 +11,7 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
     <link href="{{ asset('css/stilosR.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profile_public.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script src="{{ asset('atlantis/assets/js/core/popper.min.js') }}"></script>
@@ -33,11 +34,7 @@
                             <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item ">
-<<<<<<< HEAD
-                            <a class="nav-link" href="{{ route('') }}">About Us</a>
-=======
                             <a class="nav-link" href="{{ route('about_us') }}">About Us</a>
->>>>>>> 61503c57088b5c306ed2820db2de14c6c87a3fa5
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
@@ -129,106 +126,56 @@
         </div>
 
         <div class="row " style="color: black; margin-left: 350px; margin-top:50px">
-            <div class="col-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Title</h5>
-                        <p class="clasificacion">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <!--
-                            --><label class="star" for="radio1">★</label>
-                            <!--
-                            --><input id="radio2" type="radio" name="estrellas" value="4">
-                            <!--
-                            --><label class="star" for="radio2">★</label>
-                            <!--
-                            --><input id="radio3" type="radio" name="estrellas" value="3">
-                            <!--
-                            --><label class="star" for="radio3">★</label>
-                            <!--
-                            --><input id="radio4" type="radio" name="estrellas" value="2">
-                            <!--
-                            --><label class="star" for="radio4">★</label>
-                            <!--
-                            --><input id="radio5" type="radio" name="estrellas" value="1">
-                            <!--
-                            --><label class="star" for="radio5">★</label>
-                        </p>
+            @if ($resources == [] || $resources == [ ] || $resources == "")
+                <h5 style="color: white;">Nothing registred resources for you</h5>
+            @else
+                @foreach ($resources as $resource )
+                    <div class="col-3 mr-4 ">
+                        <div class="card">
+                            <img src="{{ asset('img/'.$resource->url_image) }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$resource->name}}</h5>
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <!--
+                                --><label class="star" for="radio1">★</label>
+                                            <!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4">
+                                            <!--
+                                --><label class="star" for="radio2">★</label>
+                                            <!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3">
+                                            <!--
+                                --><label class="star" for="radio3">★</label>
+                                            <!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2">
+                                            <!--
+                                --><label class="star" for="radio4">★</label>
+                                            <!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1">
+                                            <!--
+                                --><label class="star" for="radio5">★</label>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Title</h5>
-                        <p class="clasificacion">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <!--
-                            --><label class="star" for="radio1">★</label>
-                            <!--
-                            --><input id="radio2" type="radio" name="estrellas" value="4">
-                            <!--
-                            --><label class="star" for="radio2">★</label>
-                            <!--
-                            --><input id="radio3" type="radio" name="estrellas" value="3">
-                            <!--
-                            --><label class="star" for="radio3">★</label>
-                            <!--
-                            --><input id="radio4" type="radio" name="estrellas" value="2">
-                            <!--
-                            --><label class="star" for="radio4">★</label>
-                            <!--
-                            --><input id="radio5" type="radio" name="estrellas" value="1">
-                            <!--
-                            --><label class="star" for="radio5">★</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            @endif
+        </div>
 
-            <div class="col-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Title</h5>
-                        <p class="clasificacion">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <!--
-                        --><label class="star" for="radio1">★</label>
-                            <!--
-                        --><input id="radio2" type="radio" name="estrellas" value="4">
-                            <!--
-                        --><label class="star" for="radio2">★</label>
-                            <!--
-                        --><input id="radio3" type="radio" name="estrellas" value="3">
-                            <!--
-                        --><label class="star" for="radio3">★</label>
-                            <!--
-                        --><input id="radio4" type="radio" name="estrellas" value="2">
-                            <!--
-                        --><label class="star" for="radio4">★</label>
-                            <!--
-                        --><input id="radio5" type="radio" name="estrellas" value="1">
-                            <!--
-                        --><label class="star" for="radio5">★</label>
-                        </p>
-                    </div>
+        <div class="row">
+
+            <div class="col" style="margin-top: 300px;margin-left:300px">
+                <div class=""
+                    style="background-image:url({{ asset('img/estadisticas1.png') }}); background-repeat: no-repeat; width:100%; height:160vh;">
                 </div>
+    
             </div>
         </div>
     </div>
 
 
     <!-- 6 row -->
-    <div class="row">
-
-        <div class="col" style="margin-top: 300px;margin-left:300px">
-            <div class=""
-                style="background-image:url({{ asset('img/estadisticas1.png') }}); background-repeat: no-repeat; width:100%; height:160vh;">
-            </div>
-
-        </div>
-    </div>
-    </div>
 </body>
 
 </html>

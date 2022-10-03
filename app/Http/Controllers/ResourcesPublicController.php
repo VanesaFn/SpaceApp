@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Resource;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class ResourcesPublicController extends Controller
     public function index()
     {
         $resources = Resource::get();
-        return view('public.resources.index', compact('resources'));
+        $categories = Category::get();
+        return view('public.resources.index', compact('resources', 'categories'));
     }
 
 }

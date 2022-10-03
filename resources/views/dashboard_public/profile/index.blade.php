@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
     <!-- Core JS Files Bootstrap -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home_css.css') }}" rel="stylesheet">
     <link href="{{ asset('css/profile_public.css') }}" rel="stylesheet">
     <!-- Core CSS Files Bootstrap-->
     <script src="{{ asset('atlantis/assets/js/core/jquery.3.2.1.min.js') }}"></script>
@@ -18,6 +19,9 @@
 </head>
 
 <body style="color: white; background-color: black;">
+    <video autoplay muted loop id="myVideo">
+        <source src="{{ asset('img/Star_background.mp4')}}" type="video/mp4">
+      </video>
     <div class="container-fluid">
         <div class="row ">
             <div class="col-3 offset-4">
@@ -71,6 +75,13 @@
                 <div class="row">
                     <div class="col-12 mt-2">
                         <a href="" class="text-light">
+                            <h5>{{$user->phone}}</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-2">
+                        <a href="" class="text-light">
                             <h5>{{$user->pais}}</h5>
                         </a>
                     </div>
@@ -78,7 +89,7 @@
                 <div class="row">
                     <div class="col-12 mt-2">
                         <a href="" class="text-light">
-                            <h5>Settings</h5>
+                            <h5>Configuración</h5>
                         </a>
                     </div>
                 </div>
@@ -94,16 +105,16 @@
                     <h2>My resources and repositories</h2>
                 </div>
                 <div class="row " style="color: black;">
-                    @if (isset($resources))
-                        <h5  style="color: white;">Nothing registred resources for you</h5>
-                        
+                    @if ($resources == [] || $resources == [ ] || $resources == "")
+                        <h5 style="color: white;">Nothing registred resources for you</h5>
                     @else
-                        @foreach ($resources as $resource )
-                            <div class="col-6">
+                    @foreach ($resources as $resource )
+                            <div class="col-6 mt-4">
                                 <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/'.$resource->url_image) }}" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title</h5>
+                                        <h5 class="card-title">{{$resource->name}}</h5>
+                                        <p>{{$resource->description}}</p>
                                         <p class="clasificacion">
                                             <input id="radio1" type="radio" name="estrellas" value="5">
                                             <!--

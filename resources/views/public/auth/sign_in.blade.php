@@ -30,17 +30,6 @@
         <div class="row">
             <div class="col-3 offset-4">
                 <nav class="navbar navbar-expand-sm">
-<<<<<<< HEAD
-                    <ul class="navbar-nav ml-4">
-                        <li class="nav-item  ">
-                            <a class="nav-link" href="{{ route('home') }}">Home</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('') }}">About us</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
-=======
                     <ul class="navbar-nav ">
                         <li class="nav-item ">
                             <a class="nav-link" href="{{route('home')}}">Home</a>
@@ -50,7 +39,6 @@
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="{{route('resources_public')}}">Resources</a>
->>>>>>> 61503c57088b5c306ed2820db2de14c6c87a3fa5
                         </li>
                     </ul>
                 </nav>
