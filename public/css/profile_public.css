@@ -9,7 +9,8 @@
 }
 
 .star {
-  font-size: 50px;
+  text-align: center;
+  font-size: 38px;
 }
 
 input[type="radio"] {
