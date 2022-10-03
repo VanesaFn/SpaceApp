@@ -33,11 +33,7 @@
                             <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item ">
-<<<<<<< HEAD
-                            <a class="nav-link" href="{{ route('') }}">About Us</a>
-=======
                             <a class="nav-link" href="{{ route('about_us') }}">About Us</a>
->>>>>>> 61503c57088b5c306ed2820db2de14c6c87a3fa5
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="{{ route('resources_public') }}">Resources</a>
